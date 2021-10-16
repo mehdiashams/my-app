@@ -7,11 +7,13 @@ import { SearchSuggestions } from "./SearchSuggestions/SearchSuggestions";
 
 export function LandingPage() {
     return (
-        <div>
-            <TopNav/>
-            <img src={logo} className={styles.logo} alt='logo'/>
-            <SearchBar/>
-            <SearchSuggestions/>
-        </div>
+            <><div className={styles.landing}>
+
+        </div><div className={styles['search-area']}>
+                <TopNav />
+                <img src={logo} className={styles.logo} alt='logo' />
+                <SearchBar />
+                <SearchSuggestions />
+            </div></>
     );
 }
