@@ -2,6 +2,8 @@ import React from "react";
 import { BusinessRating } from "../../../BusinessRating/BusinessRating";
 import styles from './SearchResult.module.css';
 
+
+
 export function SearchResult() {
     return(
         <div className={styles['search-result']}>
@@ -9,7 +11,7 @@ export function SearchResult() {
           <div className={styles['business-info']}>
           <h2 className="subtitle">Burger Place</h2>    
           <BusinessRating/>
-          <p>$$ <span class="tag">Burgers</span> <span class="tag">Fast Food</span>   </p>
+          <p>$$ <span className="tag">Burgers</span> <span className="tag">Fast Food</span>   </p>
           </div>
           <div>
           <div className={styles['contact-info']}> </div>    

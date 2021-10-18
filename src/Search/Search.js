@@ -4,7 +4,8 @@ import { SubNav } from "../NavBar/SubNav/SubNav";
 import { SearchResults } from "./SearchResults/SearchResults";
 import { SearchResultsSummary } from "./SearchResultsSummary/SearchResultsSummary";
 
-export function Search() {
+export function Search()
+ {
     return (
         <div>
             <NavBar/>
