@@ -5,7 +5,7 @@ import styles from './LandingPage.module.css'
 import { SearchBar } from "../SearchBar/SearchBar";
 import { SearchSuggestions } from "./SearchSuggestions/SearchSuggestions";
 import useReactRouter  from "use-react-router";
-import { Search } from "../Search/Search";
+
 
 export function LandingPage() {
 

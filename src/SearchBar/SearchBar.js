@@ -1,4 +1,5 @@
-import react, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import styles from './SearchBar.module.css';
 
 export function SearchBar(props) {
@@ -6,8 +7,8 @@ export function SearchBar(props) {
   const [location, setLocation] = useState(props.location || '');
 
   function submit(e) {
-    if(typeof props.search == 'function') {
-      props.search(term, location);
+    if(props.search && typeof props.search == 'function') {
+       props.search(term, location);
     }
     console.log(term, location);
     e.preventDefault();
@@ -27,6 +28,7 @@ export function SearchBar(props) {
     <input className={`input ${sizeClass} ${styles['input-control']} `}
        onChange={(e) =>setTerm(e.target.value)}   
        type="text"
+       value={term}
        placeholder="Businesses"
                
       /> 
@@ -38,6 +40,7 @@ export function SearchBar(props) {
              <input className={`input ${sizeClass} ${styles['input-control']} `}
             onChange={(e) => setLocation(e.target.value)}   
             type="text"
+            value={location}
              placeholder="Where"/> 
            </p>
 
