@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import * as api from './api';
 
+
 export function useBusinessSearch(term,location) {
-    const [business, setBusinesses] = useState([]);
+    const [businesses, setBusinesses] = useState([]);
     const [amountResults, setAmountResults] = useState();
     const [searchParams, setSearchParams] = useState({term, location});
 
@@ -11,9 +12,9 @@ export function useBusinessSearch(term,location) {
         setBusinesses([]);
         const fetchData= async () => {
             try {
-                const rawData = await api.get('/business/search', searchParams);
+                const rawData = await api.get('/businesses/search', searchParams);
             const resp = await rawData.json();
-            setBusinesses(resp.business);
+            setBusinesses(resp.businesses);
             setAmountResults(resp.total);
             } catch(e) {
                 console.error(e);
@@ -22,5 +23,5 @@ export function useBusinessSearch(term,location) {
         fetchData();
 
     }, [searchParams]);
-    return [business, amountResults, searchParams, setSearchParams];
+    return [businesses, amountResults, searchParams, setSearchParams];
 }
