@@ -14,7 +14,7 @@ export function SearchResult(props) {
   const addressLines = b.location.display_address.map(addressLine => <p key={b.id + addressLine}>{addressLine}</p>);
    return (
         <div className={styles['search-result']}>
-          <img src={b.img_url} alt='business' className={styles['business-image']}/>
+          <img src={b.image_url} alt='business' className={styles['business-image']}/>
           <div className={styles['business-info']}>
           <h2 className="subtitle">{b.name}</h2>    
           <BusinessRating reviewCount={b.review_count} rating={b.rating}/>

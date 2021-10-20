@@ -18,7 +18,9 @@ export function SubNavItem(props) {
          <div className="dropdown-menu" id="dropdown-menu4" role="menu">
           <div className="dropdown-content">
             <div className="dropdown-item">
-              <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+              <p> -Sort By Type</p>
+              <p>-Sort By Price</p>
+              <p> -Sort By Rating</p>
             </div>
           </div>
         </div>

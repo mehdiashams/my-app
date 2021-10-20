@@ -11,7 +11,7 @@ export function Search() {
     const params = new URLSearchParams(location.search);
     const term = params.get('find_desc');
     const locationParam = params.get('find_loc');
-    const [businesses, amountResults, searchParams, performSearch] = useBusinessSearch(term, locationParam);
+    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(term, locationParam);
     
     if(!term || !locationParam) {
         history.push('/');
@@ -23,7 +23,7 @@ export function Search() {
         const encodedTerm = encodeURI(term);
         const urlEncodedLocation = encodeURI(location);
         history.push(`/search?find_desc=${encodedTerm} &find_loc=${urlEncodedLocation}`);
-        performSearch({term, location})
+        setSearchParams({term, location})
     }
 
     return (

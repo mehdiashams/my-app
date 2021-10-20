@@ -2,6 +2,7 @@
     margin-top: 1rem;
 }
 .search-results {
+    background-color: rgb(232, 239, 240);
  display: flex;
  flex-direction: column;
 }
